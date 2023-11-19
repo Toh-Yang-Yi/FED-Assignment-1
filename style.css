@@ -34,8 +34,8 @@ Use margin to center the top menu links.*/
 nav li {
     display: inline-block;
     margin: 45px 45px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     
     position: relative;
 }
@@ -60,13 +60,26 @@ nav a::before {
     background-color: #ffffff;
     
     position: absolute;
-    bottom: 25% ;
+    bottom: 5% ;
     width: 0%;
-
+/*transition for the top bar animation*/
     transition: all ease-in-out 250ms;
 }
 
 nav a:hover::before {
     width: 100%;
 }
-   
+
+/* JungKook Image*/
+.img  {
+    float: left;
+    width: 300px;
+    height: 450px; 
+    position: fixed;
+    padding: 100px;   
+}
+
+.text-position {
+    float: left
+    
+}
