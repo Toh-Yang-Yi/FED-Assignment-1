@@ -82,19 +82,40 @@ nav a:hover::before {
 }
 
 .text-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-color: black;
     padding-top: 0px;
     padding-left: 500px;
     width: 400px;
-    text-align: center;
+
 }
 
 /*Merch Image*/
-.img_merch{
+.img-merch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 200px;
-    padding-top: 40px;
+    padding-top: 40px;  
     padding-left: 500px;
     padding-bottom: 40px;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+video {
+    width: 80%;
+    height: 80%;
+    display: block;
 }
 
 
