@@ -4,6 +4,11 @@ body {
     background: white;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
+    background-image: url("https://i.pinimg.com/564x/dd/6c/80/dd6c80c3f361b532a015d6375e0dfc80.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
 }
 .topmenu {
     width: 80%;
@@ -59,12 +64,12 @@ nav a:hover {
 nav a::before {
     content: '';
     display: block;
-    height: 3px;
+    height: 5px;
     /*background color for animation*/
     background-color: #ffffff;
     
     position: absolute;
-    bottom: 0 ;
+    bottom: -10% ;
     width: 0%;
 /*transition for the top bar animation*/
     transition: all ease-in-out 250ms;
@@ -86,12 +91,11 @@ nav a:hover::before {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-top: 1px;
-    border-bottom: 1px;
     border-color: black;
     padding-top: 0px;
     padding-left: 500px;
     width: 400px;
+    color: whitesmoke;
 
 }
 
@@ -113,6 +117,7 @@ nav a:hover::before {
     align-items: center;
 }
 video {
+    border: 2px solid black;
     width: 80%;
     height: 80%;
     display: block;
