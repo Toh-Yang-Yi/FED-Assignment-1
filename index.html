@@ -1,14 +1,15 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/cfa2770125.js" crossorigin="anonymous"></script>
 </head>
 <title>index.html</title>
 
-<header>
+<header class="header">
   <div class="topmenu">
     <nav>
       <ul>
@@ -24,8 +25,66 @@
     </nav>
 
   </div>
+
 </header>
 <body>
+  <div class="sidebar">
+    <div class="top">
+      <div class="logo">
+        <i class="bx bxl-codepen"></i>
+        <span>JungKook</span>
+      </div>
+      <i class="fa-solid fa-bars" id="btn"></i>
+    </div>
+    <div>
+      <p class="bold">Clint B.</p>
+      <p>Admin</p>
+    </div>
+    <ul>
+      <li>
+        <a href="#">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <span class="nav-item">HOME</span>
+        </a>
+        <span class="tooltip">HOME</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-music"></i>
+          <span class="nav-item">MUSIC</span>
+        </a>
+        <span class="tooltip">MUSIC</span>
+      </li>      
+      <li>
+        <a href="#">
+          <i class="fa fa-ticket" aria-hidden="true"></i>
+          <span class="nav-item">CONCERT</span>
+        </a>
+        <span class="tooltip">CONCERT</span>
+      </li>      
+      <li>
+        <a href="#">
+          <i class="fas fa-user-plus"></i>
+          <span class="nav-item">FOLLOW</span>
+        </a>
+        <span class="tooltip">FOLLOW</span>
+      </li>      
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-shirt"></i>
+          <span class="nav-item">MERCH</span>
+        </a>
+        <span class="tooltip">MECH</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="container"></div>
+    <h1>JungKook</h1>
+  </div>
+    
+
   <div class="center-container">
     <img class="img_jungkook" src = "C:\Ngee Ann Courses\year 1 sem 2\FED\FED Assignment 1\FED-Assignment-1\Jung Kook img.png" alt="JungKook" > 
   </div>
@@ -52,3 +111,14 @@
 
   
 </body>
+<script>
+  let btn = document.querySelector('#btn')
+  let sidebar = document.querySelector('.sidebar')
+
+  btn.onclick = function () {
+  sidebar.classList.toggle('active')
+};
+</script>
+<script src="C:\Ngee Ann Courses\year 1 sem 2\FED\FED Assignment 1\FED-Assignment-1\FED-Assignment-1\website.js"></script>
+
+</html>
