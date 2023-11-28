@@ -1,12 +1,10 @@
 
 /* side menu pop up */
-let btn = document.querySelector('#btn')
-let sidebar = document.querySelector('.sidebar')
-
-btn.onclick = function () {
-    sidebar.classList.toggle('active')
-};
-
+hamburger = document.querySelector(".hamburger") /* to select objects with hamburger as their classes */
+hamburger.onclick = function() {
+    navBar = document.querySelector(".nav-bar"); /* select objects with nav-bar as their class */
+    navBar.classList.toggle("active") /* Make the dropdown effect when the user clicks on the hamburger bar */
+}
 /* music page */
 const faders = document.querySelectorAll('.fade-in') /* any thing with a class of fade-in will be selected */
 /* to slow down the fade in */

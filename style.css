@@ -1,159 +1,213 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Playpen+Sans:wght@100&display=swap');
-
-
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.user-img {
-    width: 50px;    
-    border-radius: 100%;
-    border: 1px solid #eee;
-}
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100px;
-    background-color: #12171e;
-    padding: .4rem .8rem;
-    transition: all 0.5s ease;
-    z-index: 100
-}
-
-.sidebar.active ~ .main-content {
-    left: 180px;
-    width: calc(100% - 180px);
-}
-
-.sidebar.active {
-    width: 180px;
-}
-
-.sidebar #btn {
-    position: absolute;
-    color: white;
-    top: .4rem;
-    left: 50%;
-    font-size: 1.2rem;
-    line-height: 50px;
-    transform: translate(-50%);
-    cursor: pointer;
-}
-
-.sidebar.active #btn {
-    left: 90%;
-}
-
-.sidebar .top .logo {
-    color: white;
-    display: flex;
-    height: 50px;
-    width: 100%;
-    align-items: center;
-    pointer-events: none;
-    opacity: 0;
-}
-
-.sidebar.active .top .logo {
-    opacity: 1;
-}
-
-.top .logo i {
-    font-size: 2rem;
-    margin-right: 5px;
-}
-
-.user {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
-}
-
-.user p {
-    color: #fff;
-    opacity: 1;
-    margin-left: 1rem;
-
-}
-
-.bold {
-    font-weight: 600;
-    color: white;
-}
-
-.sidebar p {
-    opacity: 0;
-}
-
-.sidebar.active p {
-    opacity: 1;
-}
-
-.sidebar ul li {
-    position: relative;
-    list-style-type: none;
-    height: 50px;
-    width: 90%;
-    margin: 0.8rem auto;
-    line-height: 50px;
-}
-
-.sidebar ul li a{
-    color: #fff;
-    display: flex;
-    align-items: center;
+    list-style: none;
     text-decoration: none;
-    border-radius: 0.8rem;
+    font-family: "Google Sans Regular";
+    box-sizing: border-box;
+}
+body {
+    background-image: url("C:\\Ngee Ann Courses\\year 1 sem 2\\FED\\FED Assignment 1\\FED-Assignment-1\\background image.png");
+    margin: 0;
+    padding: 0;
 }
 
-.sidebar ul li a:hover {
-    background-color: #fff;
-    color: #12171e;
+/* top nav bar */
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background: #11101b; /* makes the top nav bar black in color */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px; /* adjust the distance between the text jung kook and the menu texts */
+    z-index: 100;
 }
 
-.sidebar ul li a i {
-    min-width: 50px;
-    text-align: center;
-    height: 50px;
-    border-radius: 12px;
-    line-height: 50px;
+.Name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fefefe
 }
-
-.sidebar .nav-item {
-    opacity: 0;
-}
-
-.sidebar.active .nav-item {
-    opacity: 1;
-}
-
-.sidebar ul li .tooltip {
-    position: absolute;
-    left: 125px;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);;    
-    border-radius: .6rem;
-    padding: .4rem 1.2rem;
-    line-height: 1.8rem;
-    z-index: 20;
-    opacity: 0;
-}
-
-.sidebar ul il:hover .tooltip {
-    opacity: 1;
-}
-
-.sidebar.active ul li.tooltip {
+  
+.hamburger {
     display: none;
 }
 
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+/* when hovering adds the white background */
+.nav-bar ul li a:hover {
+    color: #11101b;
+    background: #fefefe;
+}
+
+.nab-bar ul li a.active {
+    color: #11101b;
+    background: #fefefe;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+/* to make top menu change into side menu when screen gets smaller */
+@media only screen and (max-width: 900px) {
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #11101b;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    .nav-bar.active {
+        height: 450px;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+        color: #fefefe;
+    }
+}
+
+/*Footer*/
+footer {
+    background-color: #111;
+}
+
+/* Spacing and alignment */
+.footer {
+    width: 100%;
+    padding: 70px 40px 20px;
+}
+
+/* makes the icons go to the center */
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white; /* make a square background behind each icon */
+    margin: 10px; /* spaces each icons */
+    border-radius: 50%;  /* make the square background round */
+}
+
+.socialIcons a i {
+    font-size: 2em; /* make the icon bigger */
+    color: black;
+    opacity: 0.9;
+}
+
+/* hover effects on the icons */
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: nondisc; /* remove the bullet points from the Home etc */
+}
+/* makes the text white and spaces the text out */
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 100%;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+/* adds the hover effect from the text */
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+/* makes the copyright text white in color */
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+/* makes footer responsive */
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
 .container {
     display: flex;
     justify-content: center;
@@ -161,91 +215,7 @@
     width: 100%;
 }
 
-/* code to make the menu background black in color*/
 
-body {
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-    z-index: -1;
-
-}
-
-.topmenu {
-    width: 80%;
-    margin: auto;
-}
-/*code to make the topmenu header black in color*/
-header {
-    display: flex;
-    justify-content: center;
-    background: black;
-    top: 0;
-    left: 100px;
-    position: sticky;
-    height: 100px;   
-    padding-top: 0px;
-    padding-bottom: 0px;
-    z-index: 10;
-}
-/*code to ensure that the topmenu header container does not get overwride*/
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-/*code to make the contents/links of the topmenu shift to the right side*/
-nav {
-    text-align: center;
-}
-/*code to remove extra spaces from the top and the bottom of the topmenu background and to remove the bullet points*/
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-/*display: inline-block to put the menu side by side with spacing in between.
-Use margin to center the top menu links.*/
-nav li {
-    display: inline-block;
-    margin: 40px 40px;
-    position: relative;
-}
-
-
-nav a {
-    float: left;
-    color:aliceblue;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;  
-}
-/*color of menu when hovering*/
-nav a:hover {
-    color: #55d6aa;
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    /*background color for animation*/
-    background-color: #ffffff;
-    
-    position: absolute;
-    bottom: -10% ;
-    width: 0%;
-/*transition for the top bar animation*/
-    transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
 
 /* JungKook Image*/
 .img_jungkook {
@@ -259,56 +229,21 @@ nav a:hover::before {
 
 .text-position-homepage    {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-color: black;
     padding-top: 30px;
-    margin: 0;
+    margin-top: 80px;
     padding: 0;
-    width: 100%;
-    color: black;
-
-}
-
-
-.side-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    background: black;
-    z-index: 1000;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.side-menu a {
-    padding: 15px 20px;
-    text-decoration: none;
-    font-size: 18px;
+    width: 50%;
     color: white;
-    display: block;
-    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto
 }
-
-.side-menu a:hover {
-    background-color: #55d6aa;
+.text-position-homepage p{
+    max-width: 100%; /* ensure the text doesn't overflow */
     color: black;
-}
-.menu-toggle {
-    display: none;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    z-index: 1200;
-    font-size: 24px;
-    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -316,21 +251,16 @@ nav a:hover::before {
 /*Merch Image*/
 .img-merch{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 50%;
+    height: 40%;
     padding-top: 40px;  
     padding-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px
-}
 .video {
     display:contents;
     justify-content: center;
@@ -537,6 +467,7 @@ button {
 }
 
 .music-page-text-box {
+    text-align: center;
     margin-top: 5%;
     color: black;
 }
@@ -647,83 +578,3 @@ button {
 }
 
 
-/* @media for merch page */
-@media(max-width:1000px) {
-    .content-merch {
-        width: 45%;
-    }
-}
-
-@media(max-width:750px) {
-    .content {
-        width: 100%;
-    }
-}
-
-/* @media for homepage */
-@media screen and (min-width: 1000px) {
-    .sidebar {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .img_jungkook {
-        width: 100%;
-        height: auto;
-    }
-
-    .container {
-        width: 100%;
-        height: auto;
-    }
-    
-    h1 {
-        display: none;
-    }
-
-}
-
-@media screen and (max-width: 1000px) {
-
-    .main-content {
-        flex-direction: column;
-    }
-
-    .topmenu {
-        display: none;
-    }
-
-    header {
-        display: none;
-    }
-    
-    .main-content {
-        left: 100px
-    }
-
-    .center-container {
-        display: none;
-    }
-    
-    .text-position {
-        display: none;
-    }
-
-    .img-merch {
-        width: 50%;
-    }
-
-    .img_jungkook {
-        width: 100%;
-        height:auto
-    }
-
-    .box {
-        margin-top: 50px;
-        width: 80%;
-    }
-
-}
