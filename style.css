@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Playpen+Sans:wght@100&display=swap');
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Playpen+Sans:wght@100&family=Poppins&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,11 +13,12 @@ body {
     background-image: url("C:\\Ngee Ann Courses\\year 1 sem 2\\FED\\FED Assignment 1\\FED-Assignment-1\\background image.png");
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* top nav bar */
 header {
-    position: fixed;
+    position: relative;
     width: 100%;
     height: 80px;
     background: #11101b; /* makes the top nav bar black in color */
@@ -24,6 +27,8 @@ header {
     justify-content: space-between;
     padding: 0 100px; /* adjust the distance between the text jung kook and the menu texts */
     z-index: 100;
+    margin-bottom: 100px;
+    
 }
 
 .Name {
@@ -314,117 +319,172 @@ footer {
 }
 
 /* Products */
-
-h3 {
-    text-align:center;
-    font-size: 30px;
-    margin: 0;
-    padding-top: 10px;
+.merch-container {
+    width: 1000px;
+    margin: auto;
+    transition: 0.5s;
 }
-
-a {
-    text-decoration: none;
+/* make the columns that display the products */
+.merch-header {
+    display: grid;
+    grid-template-columns: 1fr 50px;
 }
-
-.gallery-merch {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;    
-    align-items: center;
-    margin: 50px 0;
+.merch-header .shopping {
+    position: relative;
+    text-align: right;
 }
-
-.content-merch {
-    width: 27%;
-    margin: 15px;
-    box-sizing: border-box;
-    float: left;
-    text-align: center;
-    border-radius: 20px;
-    cursor: pointer;
-    padding-top: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    transition: .4s;
-    background: #f2f2f2;
+/* style the shopping cart icon */
+.merch-header .shopping svg {
+    width: 40px;
 }
-.content-merch:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    transform: translate(0px, -8px);
-}
-
-.merch-img {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-}
-
-.p-homepage {
-    text-align: center;
-    color: #b2bec3;
-    padding-top: 0 8px;
-}
-
-h6 {
-    font-size: 26px;
-    text-align: center;
-    color: #222f3e;
-    margin: 0;
-}
-
-.ul-merch {
-    list-style: none;
+/* style for the number below the shopping cart icon */
+.merch-header .shopping span{
+    background-color: red;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 0;
-}
-
-li {
-    padding-top: 5px;
-}
-
-.fa {
-    font-size: 26px;
-    transition: .4s;
-    margin: 3px;
-}
-
-.checked {
-    color: #ff9f43;
-}
-
-.fa:hover {
-    transform: scale(1.3);
-    transition:  .6s;
-}
-
-button {
-    text-align: center;
-    font-size: 24px;
     color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
+.card {
+    position: fixed;
+    top: 0;
+    left: 100%; /* gets the cart menu out of view */
+    width: 500px;
+    background-color: black;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.card h1 {
+    margin-top: 100px;
+    color: white;
+    font-weight: 100;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.card .checkOut {
+    position: absolute;
+    bottom: 0; /* push the items to the bottom */
     width: 100%;
-    padding: 15px;
-    border: 0;
-    outline: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+/* aligns the checkout items at the bottom of the page */
+.card .checkOut div {
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 5px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+}
+/* style for "Close" */
+.card .checkOut div:nth-child(2) {
+    background-color: black;
+    color: white
+}
+/* for javascript when toggle the mennu will slide in */
+.active .card {
+    left: calc(100% - 500px)
 }
 
-.buy-1 {
-    background: #2183a2;
+.active .container {
+    transform: translate(-200px);
 }
 
-.buy-2 {
-    background:  #3b3e6e;
+/* creates the box behind the items */
+.list .item {
+    height: 100%;
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
 }
 
-.buy-3 {
-    background: #0b0b0b;
+.list .item img {
+    width: 90%; 
+}
+
+.list .item .title {
+    font-weight: 600;
+}
+.list .item .price {
+    margin: 10px;
+}
+/* styling for Add To Cart button */
+.list .item button {
+    background-color: #1C1F25;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+}
+
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img{
+    width: 90%;
+}
+
+.listCard button {
+    width: 20px;
+    background-color: #fff5;
+    border: none;
+}
+
+.listCard .count {
+    margin: 0 10px;
+}
+
+@media only screen and (max-width: 972px) {
+    .merch-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .card {
+        width: 70%; /* Adjust the width for smaller screens */
+        left: 100%;
+    }
+
+    .active .card {
+        left: 30%;
+    }
+
 }
 
 /* Music Page */
