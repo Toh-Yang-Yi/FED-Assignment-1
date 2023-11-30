@@ -1,45 +1,23 @@
 
 /* side menu pop up */
-hamburger = document.querySelector(".hamburger") /* to select objects with hamburger as their classes */
-hamburger.onclick = function() {
-    navBar = document.querySelector(".nav-bar"); /* select objects with nav-bar as their class */
-    navBar.classList.toggle("active") /* Make the dropdown effect when the user clicks on the hamburger bar */
+function SideMenu() {
+    const hamburger = document.querySelector(".hamburger") /* to select objects with hamburger as their classes */
+    hamburger.onclick = function() {
+        navBar = document.querySelector(".nav-bar"); /* select objects with nav-bar as their class */
+        navBar.classList.toggle("active") /* Make the dropdown effect when the user clicks on the hamburger bar */
+    };
 }
-/* music page */
-const faders = document.querySelectorAll('.fade-in') /* any thing with a class of fade-in will be selected */
-/* to slow down the fade in */
-const sliders = document.querySelectorAll(".slide-in")
-const appearOptions = {
-    threshold: 0,
-    rootMargin: "0px 0px -250px 0px" /* To fade in the columns when they are 100px from the bottom of the page */
-};
 
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return
-        }else {
-            entry.target.classList.add('appear');
-            appearOnScroll.unobserve(entry.target);
-        }
-    });
-},
-appearOptions);
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-});
 
-sliders.forEach(slider => {
-    appearOnScroll.observe(slider);
-});
+
 
 /* merch page */
 let openShopping = document.querySelector('.shopping'); /* select class shopping */
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCard');
-let body = document.querySelector('body');
+let body = document.querySelector('.showCart');
 let total = document.querySelector('.total')
 let quantity = document.querySelector('.quantity')
 
@@ -54,19 +32,37 @@ let products = [
     {
         id: 1,
         name: 'T-shirt',
-        image: "C:\\Ngee Ann Courses\\year 1 sem 2\\FED\\FED Assignment 1\\FED-Assignment-1\\FED-Assignment-1\\Jung kook t-shirt merch pic.png",
+        image: "images\\Jung kook t-shirt merch pic.png",
         price: 29.90
     },
     {
-        id: 1,
-        name: 'T-shirt',
-        image: "C:\\Ngee Ann Courses\\year 1 sem 2\\FED\\FED Assignment 1\\FED-Assignment-1\\FED-Assignment-1\\jung kook jacket.png",
+        id: 2,
+        name: 'Jacket',
+        image: "images\\jung kook jacket.png",
         price: 29.90
     },
     {
         id: 3,
-        name: 'Shirt and Pants',
-        image: "C:\Ngee Ann Courses\\year 1 sem 2\\FED\\FED Assignment 1\\FED-Assignment-1\\FED-Assignment-1\\jung kook toy.png",
+        name: 'Hoodie',
+        image: "images\\golden album jacket.png",
+        price: 29.90
+    },
+    {
+        id: 4,
+        name: 'Golden album T-shirt',
+        image: "images\\golden album t-shirt.png",
+        price: 29.90
+    },
+    {
+        id: 5,
+        name: 'Jung Kook bag',
+        image: "images\\jung kook bag.png",
+        price: 29.90
+    },
+    {
+        id: 6,
+        name: 'Seven T-shirt',
+        image: "images\\jung kook 'seven' t-shirt.png",
         price: 29.90
     },
 
@@ -81,7 +77,7 @@ function initApp() {
             <img src="${value.image}"/>  
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add ToCard</button>
+            <button onclick="addToCard(${key})">Add To Cart</button>
         `;
         list.appendChild(newDiv);
     })
@@ -108,7 +104,6 @@ function reloadCard(){
                 <div><img src="${value.image}"/></div>
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString()}</div>
-                <div>${value.quantity}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
@@ -130,3 +125,6 @@ function changeQuantity(key, quantity) {
     }
     reloadCard();
 }
+
+
+
