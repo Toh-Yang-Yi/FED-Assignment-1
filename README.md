@@ -14,4 +14,21 @@ LINKS :
 
 Features :
 
+Top navigation bar - Universal navigation tool which allow the user to navigate to every page conveniently. The position is fixed so that the user doesn't have to keep scrolling back up
+
+drop down menu - the hamburger bar will appear when the screen size is reduced to a certain width and will replace the top navigation bar for responsiveness
+
+Music Page:
+thumnail - The thumbnail of the songs will slowly fade in from the left or the right 
+
+neon-button - the buttono will change in color and also become brighter when hovering over it. users can also click on the button to play the song.
+
+Merch Page:
+products - the products container include the image, type of product, description and add to cart. Users are able to click on add to cart to add the item to their cart.
+
+shopping cart icon - Users can click on the shopping cart icon to reveal their cart and check how much item they have and the total cost. Thye can also remove the items for the cart.
+
+Concert Page:
+Search bar - when hovering over the search bar, the search icon will slide to the write and allow users to type their text.
+
 
