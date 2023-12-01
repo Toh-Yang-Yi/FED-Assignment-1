@@ -39,12 +39,11 @@ function musicpage(){
 SideMenu()
 musicpage()
 /* code for music play button */
-var audio = document.getElementById('audio');
-
 function playorpause_audio() {
+    var audio = document.getElementById('audio');
     if (audio.paused) {
         audio.play();
-    } else {
+    } else if (audio.play) {
         audio.pause();
     }
 }
@@ -52,7 +51,7 @@ function playorpause_audio() {
 var button = document.querySelector('.neon-button');
 
 if (button) {
-    button.addEventListener('click', playorpause_audio);
+    button.addEventListener('click', playorpause_audio());
 } else {
     console.error("Button not found in the document.");
 }

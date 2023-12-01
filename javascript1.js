@@ -7,6 +7,8 @@ function SideMenu() {
         navBar.classList.toggle("active") /* Make the dropdown effect when the user clicks on the hamburger bar */
     };
 }
+SideMenu()
+
 
 
 
