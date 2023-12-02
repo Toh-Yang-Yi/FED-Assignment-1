@@ -464,84 +464,75 @@ footer {
     text-align: center;
     align-items: center;
     color: black;
-    font-size: 50px;
-}
+    font-size: 40px;
+    text-shadow: 1px 1px 1px #FC0;
+    font-family: 'Montserrat', sans-serif;
 
+}
+/* make h4 'Latest Album' smaller on smaller screens*/
 @media only screen and (max-width: 600px) {
     .music-page-album {
-        font-size: 20px
+        font-size: 25px
     }
 }
-
+/* shifts the text below the picture on smaller screens */
 @media only screen and (max-width: 821px) {
     .music-page-wrapper {
         flex-direction: column;
     }
 }
 
-/* image under latest album */
+/* image under 'latest album' */
 .music-page-album-cover {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 30%
+    width: 40%
 }
-
-
-
-.top-pic-music-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50%;
-}
-
+/* thumbnail of song appearing from left side */
 .thumbnail-left {
     max-width: 320px;
     float: left;
     border: 3px solid #fff;
     border-radius: 10px;
     margin-right: 15px;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* moves the picture 50 percent to the left from where they are positioned */
 }
-
+/* thumbnail of song appearing from right side */
 .thumbnail-right {
     max-width: 320px;
     float: right;
     border: 3px solid #fff;
     border-radius: 10px;
     margin-right: 15px;
-    transform: translateX(50%);
+    transform: translateX(50%); /* moves the picture 50% to the right from where they are positioned */
 }
 
 .thumbnail-left,
 .thumbnail-right {
     transition: opacity 250ms ease-in, transform 500ms ease-in; /* transition on both opacity and transform */
     opacity: 0;
-    visibility: hidden; /* to hide the image first so that when .thumbnail-left is triggered by javascript, the image will slowly */
+    visibility: hidden; /* to hide the image first so that when .thumbnail-left.appear and .thumbnail-right.appear is triggered by javascript, the image will slowly */
 }   
 
 .thumbnail-left.appear,
 .thumbnail-right.appear {
-    transform: translateX(0);
+    transform: translateX(0); /* moves the thumbnail back to original position */
     opacity: 1;
     visibility: visible; /* makes the image slowly fade into screen */
 }
-
+/* song description */
 .music-page-text-box {
     text-align: center;
     margin-top: 5%;
     color: black;
     position: relative;
 }
-
 .music-page-text-box h2 {
     margin: auto;
     font-size: 42px;
 }
-
 .music-page-text-box p {
     text-align: center;
     font-size: 42px;
@@ -550,7 +541,7 @@ footer {
 /* to link to the neon styling */
 :root {
     --clr-neon-green: #00ff00 ;
-    --clr-bg: hsl(323 21% 16%);
+    --clr-bg: hsl(323 21% 16%); /* color of the text inside the button */
 }
 
 .neon-button {
@@ -564,7 +555,7 @@ footer {
     color: var(--clr-neon-green); /* color for neon */
     border: var(--clr-neon-green) 0.125em solid; /* create the rectangular box */
     padding: 1rem  1em;
-    font-weight: bold; /* make the download text bold */
+    font-weight: bold; /* make the play text bold */
     border-radius: 0.25em;
     text-shadow: 
     0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 .125em; /* add the glowing effect */
@@ -573,7 +564,7 @@ footer {
     bottom: 0;
     transition: background-color 100ms linear; /* slowly makes the background color inside turn black */
 }
-
+/* when user click the button will be enlarged */
 .neon-button:active {
     font-size: 1.1rem;
 }
@@ -581,7 +572,7 @@ footer {
 
 .neon-button::before {
     pointer-events: none;
-    content: '';
+    content: ''; /* creates an empty content box */
     position: absolute;
     background: var(--clr-neon-green);
     top: 120%;
@@ -656,7 +647,8 @@ footer {
     text-align: center;
     padding-top: 100px;
     font-family: 'Montserrat', sans-serif;
-    color: #B8860B;
+    color: black;
+    text-shadow: #FC0 1px 0 10px;
 }
 
 .video-concert {
