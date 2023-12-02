@@ -1,6 +1,7 @@
-/* font */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Playpen+Sans:wght@100&family=Poppins&display=swap');
+/* import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald:wght@300;400&family=Playpen+Sans:wght@100&family=Poppins&display=swap');
 
+/* removes every element's default margin and paddingnto ensure consistent box-sizing and also make all the fonts Google Sans Regular */
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +10,10 @@
     font-family: "Google Sans Regular";
     box-sizing: border-box;
 }
+
+/* adds the repeated dotted background to all pages */
 body {
-    background-image: url("images/background-image.png");
+    background-image: url("images/background-image.png"); 
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -18,7 +21,7 @@ body {
 
 /* top nav bar */
 header {
-    position: fixed;
+    position: fixed; /* ensure that top nav will not scroll together with other elements */
     width: 100%;
     height: 80px;
     background: #11101b; /* makes the top nav bar black in color */
@@ -26,23 +29,24 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 100px; /* adjust the distance between the text jung kook and the menu texts */
-    z-index: 100;
+    z-index: 100; /* makes sure to element overlaps the top nav */
 }
 
+/* style for Jung kook's name at top nav */
 .Name {
     font-size: 28px;
     font-weight: bold;
     color: #fefefe
 }
-  
+/* side menu */
 .hamburger {
     display: none;
 }
-
+/* makes the menu side by side */
 .nav-bar ul {
-    display: flex;
+    display: flex; 
 }
-
+/* styling for the menus. 'Home', 'Music' etc */
 .nav-bar ul li a {
     display: block;
     color: #fefefe;
@@ -59,7 +63,7 @@ header {
     background: #fefefe;
 }
 
-.nab-bar ul li a.active {
+.nav-bar ul li a.active {
     color: #11101b;
     background: #fefefe;
 }
@@ -640,6 +644,15 @@ footer {
 }
 
 /* Concert Page */
+.concert-h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    color: #B8860B;
+}
+
 .video-concert {
     display: flex;
     justify-content: center;
@@ -668,7 +681,7 @@ footer {
 }   
 
 .box:hover {
-    width: 200px
+    width: 400px
 }
 
 .box:hover input {
