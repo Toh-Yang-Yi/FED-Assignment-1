@@ -264,47 +264,6 @@ footer {
 
 
 /* Merch Page */
-/* search bar */
-
-.box {
-    height: 30px;
-    display: flex;
-    cursor: pointer;
-    padding: 10px 20px;
-    background: #fff;
-    border-radius: 30px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 50px;
-    max-width: 400px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: width 0.8s; /* for smooth transition when the width changes */
-    margin: auto;
-}   
-
-.box:hover {
-    width: 200px
-}
-
-.box:hover input {
-    width: 100%;
-    
-}
-
-.box input {
-    width: 0;
-    outline: none;
-    border: none;
-    font-weight: 500;
-    transition: 0.8s;
-    background: transparent;
-}
-
-.box a .fas {
-    color: #1daf;
-    font-size: 18px;
-}
 
 /* Products */
 .merch-container {
@@ -689,6 +648,47 @@ footer {
     padding-top: 100px;
     padding-bottom: 40px;
     width: 80%;
+}
+
+.box {
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50px;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: width 0.8s; /* for smooth transition when the width changes */
+    margin: auto;
+}   
+
+.box:hover {
+    width: 200px
+}
+
+.box:hover input {
+    width: 100%;
+    
+}
+
+.box input {
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.box a .fas {
+    color: #1daf;
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 800px){
