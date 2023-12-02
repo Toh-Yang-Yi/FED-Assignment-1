@@ -62,13 +62,13 @@ header {
     color: #11101b;
     background: #fefefe;
 }
-
+/* when user is at the page, the background of the text at the top nav will be white */
 .nav-bar ul li a.active {
     color: #11101b;
     background: #fefefe;
 }
-
-@media only screen and (max-width: 1320px) {
+/* adjust the spacings bwtween 'Jung kook and the menus on the top nav when screen size decreases */
+@media only screen and (max-width: 1500px) {
     header {
         padding: 0 50px;
     }
@@ -84,12 +84,15 @@ header {
         display: block;
         cursor: pointer;
     }
+    /* creates the 3 lines of the side menu */
     .hamburger .line {
         width: 30px;
         height: 3px;
         background: #fefefe;
         margin: 6px 0;
     }
+
+    /* spacing for 'Jung kook' and the side menu */
     .nav-bar {
         height: 0;
         position: absolute;
@@ -101,20 +104,24 @@ header {
         transition: 0.2s;
         overflow: hidden;
     }
+    /* when user click on side menu, the menu will drop down */
     .nav-bar.active {
         height: 450px;
     }
+    /* display the menus in column format */
     .nav-bar ul {
         display: block;
         width: fit-content;
         margin: 80px auto 0 auto;
         text-align: center;
-        transition: 0.5s;
+        transition: 0.5s; /* creates the fade in transition for the words */
         opacity: 0;
     }
+    /* creates the fade in for the menus */
     .nav-bar.active ul {
         opacity: 1;
     }
+    /* spacing between each column */
     .nav-bar ul li a {
         margin-bottom: 12px;
         color: #fefefe;
@@ -214,7 +221,7 @@ footer {
 
 
 
-/* JungKook Image*/
+/* JungKook Image for homepage*/
 .img_jungkook {
     display: flex;
     justify-content: center;
@@ -224,7 +231,7 @@ footer {
     padding-top: 80px;
 }
 
-
+/* create the black background for the text */
 .text-position-homepage {
     display: flex;
     background-color: #111;
@@ -234,6 +241,7 @@ footer {
     margin-left: auto;
     margin-right: auto
 }
+
 .text-position-homepage p{
     text-align: center;
     max-width: 50%; /* ensure the text doesn't overflow */
@@ -244,7 +252,7 @@ footer {
 
 
 
-/*Merch Image*/
+/*image for homepage*/
 .img-merch{
     display: flex;
     justify-content: center;
@@ -256,7 +264,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
-
+/* video for homepage */
 .video {
     display:contents;
     justify-content: center;
@@ -276,16 +284,16 @@ footer {
     transition: 0.5s;
     padding-top: 100px;
 }
-/* make the columns that display the products */
+/* create the spacings between the h1 Merch and the shopping cart icon */
 .merch-header {
     display: grid;
     grid-template-columns: 1fr 50px;
 }
-
+/* For h1 Merch */
 .merch-header h1 {
     font-size: 40px;
 }
-
+/* position the shopping cart icon */
 .merch-header .shopping {
     position: relative;
     text-align: right;
@@ -311,26 +319,26 @@ footer {
     left: 80%;
     padding: 3px 10px;
 }
-
+/* creates position boxes to store the items in a row */
 .list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 20px; /* space in between each column */
+    row-gap: 20px; /* space in between each row */
     margin-top: 50px;
 }
-
-.card {
-    position: fixed;
+/* pop up display item */
+.cart {
+    position: fixed; 
     top: 0;
     left: 100%; /* gets the cart menu out of view */
     width: 500px;
     background-color: black;
     height: 100vh;
-    transition: 0.5s;
+    transition: 0.5s; /* for smooth slide in */
 }
-
-.card h1 {
+/* styling for h1 'Cart' */
+.cart h1 {
     margin-top: 100px;
     color: white;
     font-weight: 100;
@@ -339,8 +347,8 @@ footer {
     display: flex;
     align-items: center;
 }
-
-.card .checkOut {
+/* styling for the bottom 2 buttons of the cart */
+.cart .checkOut {
     position: absolute;
     bottom: 0; /* push the items to the bottom */
     width: 100%;
@@ -348,7 +356,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
 }
 /* aligns the checkout items at the bottom of the page */
-.card .checkOut div {
+.cart .checkOut div {
     background-color: white;
     width: 100%;
     height: 70px;
@@ -358,13 +366,13 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
-/* style for "Close" */
-.card .checkOut div:nth-child(2) {
+/* style for "Close" (using nth-child to select the second <div> element) */
+.cart .checkOut div:nth-child(2) {
     background-color: grey;
     color: white
 }
-/* for javascript when toggle the mennu will slide in */
-.active .card {
+/* for javascript when toggle the menu will slide in */
+.active .cart {
     left: calc(100% - 500px)
 }
 
@@ -381,18 +389,18 @@ footer {
     box-shadow: 0 50px 50px #757676;
     letter-spacing: 1px;
 }
-
+/* styling for the product details */
 .list .item img {
     width: 90%; 
     height: 65%;
 }
-
 .list .item .title {
     font-weight: 600;
 }
 .list .item .price {
     margin: 10px;
 }
+
 /* styling for Add To Cart button */
 .list .item button {
     background-color: #1C1F25;
@@ -400,31 +408,29 @@ footer {
     padding: 10px;
     width: 100%;
 }
-
-.listCard li{
+/* For the cart display */
+/* to display the items side by side in the cart display */
+.listCart li{
     display: grid;
     grid-template-columns: 100px repeat(3, 1fr);
     color: #fff;
     row-gap: 10px;
     margin-bottom: 20px;
 }
-.listCard li div {
+.listCart li div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.listCard li img{
+.listCart li img{
     width: 60%;
 }
-
-.listCard button {
+.listCart button {
     width: 20px;
     background-color: #fff5;
     border: none;
 }
-
-.listCard .count {
+.listCart .count {
     margin: 0 10px;
 }
 
@@ -433,17 +439,17 @@ footer {
         width: 90%;
         margin: auto;
     }
-
+    /* to shift the columns down when there is not enough space */
     .list {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-
-    .card {
-        width: 70%; /* Adjust the width for smaller screens */
+    /* width of the cart display */
+    .cart {
+        width: 70%; 
         left: 100%;
     }
 
-    .active .card {
+    .active .cart {
         left: 30%;
     }
 

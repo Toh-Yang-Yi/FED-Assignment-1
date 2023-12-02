@@ -16,7 +16,7 @@ SideMenu()
 let openShopping = document.querySelector('.shopping'); /* select class shopping */
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
-let listCard = document.querySelector('.listCard');
+let listCard = document.querySelector('.listCart');
 let body = document.querySelector('.showCart');
 let total = document.querySelector('.total')
 let quantity = document.querySelector('.quantity')
