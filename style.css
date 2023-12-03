@@ -613,7 +613,7 @@ footer {
     opacity: 1;
 }
 
-
+/* alignment oeach seperate thumbnail and description */
 .music-page-wrapper {
     padding-bottom: 100px;
     padding-top: 50px;
@@ -622,18 +622,6 @@ footer {
 }
 .music-page-columns {
     display: flex;
-}
-
-.col + .col {
-    margin-left: 1.5rem;
-}
-.fade-in {
-    opacity: 0;
-    transition: opacity 250ms ease-in;
-}
-
-.fade-in.appear {
-    opacity: 1;
 }
 
 .music-page-h3 {
@@ -650,7 +638,7 @@ footer {
     color: black;
     text-shadow: #FC0 1px 0 10px;
 }
-
+/* trailer of tour */
 .video-concert {
     display: flex;
     justify-content: center;
@@ -660,7 +648,7 @@ footer {
     padding-bottom: 40px;
     width: 80%;
 }
-
+/* Search bar */
 .box {
     height: 50px;
     display: flex;
@@ -675,16 +663,17 @@ footer {
     max-width: 400px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transition: width 0.8s; /* for smooth transition when the width changes */
-    margin: auto;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 20%;
 }   
-
+/* expands the width of the search bar */
 .box:hover {
     width: 400px
 }
-
+/* expand the search icon with the width */
 .box:hover input {
     width: 100%;
-    
 }
 
 .box input {
@@ -696,7 +685,7 @@ footer {
     transition: 0.8s;
     background: transparent;
 }
-
+/* search icon */
 .box a .fas {
     color: #1daf;
     font-size: 20px;
