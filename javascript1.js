@@ -13,21 +13,22 @@ SideMenu()
 
 
 /* merch page */
-let openShopping = document.querySelector('.shopping'); /* select class shopping */
+/* select classes */
+let openShopping = document.querySelector('.shopping'); 
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCart');
 let body = document.querySelector('.showCart');
 let total = document.querySelector('.total')
 let quantity = document.querySelector('.quantity')
-
+/* addEvenListener to open the shopping cart */
 openShopping.addEventListener('click', ()=>{ /* when system detects user click on shopping cart icon side menu will pop up*/
     body.classList.add('active')
 })
 closeShopping.addEventListener('click', ()=>{ /* when system detect user click on close, the side menu will close */
     body.classList.remove('active');
 })
-/* store product's data */
+/* store product's data using a Array */
 let products = [
     {
         id: 1,
@@ -69,10 +70,11 @@ let products = [
 ]
 let listCards = []; /* create array */
 function initApp() {
+    /* use loops to loop through each product and create a HTML element for each product */
     products.forEach((value, key)=>{
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
-        /* gets the image, name and price from product array */
+        /* creates the HTML structure */
         newDiv.innerHTML = `
             <img src="${value.image}"/>  
             <div class="title">${value.name}</div>
@@ -82,23 +84,31 @@ function initApp() {
         list.appendChild(newDiv);
     })
 }
-initApp();
+initApp(); /* call the function */
+/* To add a product into the cart */
 function addToCard(key){
     if (listCards[key] == null){
-        listCards[key] = JSON.parse(JSON.stringify(products[key]))
+        /* To  clone the product and set default quantity as 1 */
+        listCards[key] = JSON.parse(JSON.stringify(products[key])) /*  get a completely new and independent copy of the object so that waht ever modification does not afftect the original ome in the array. */
         listCards[key].quantity = 1;
     }
     reloadCard();
 }
+/* To reload and dispaly the cart */
 function reloadCard(){
+    /* to clear the cart list */
     listCard.innerHTML = '';
+    /* create the variables to store total quantity and price of items */
     let count = 0;
     let totalPrice = 0;
+    /* To loop through each item in the cart */
     listCards.forEach((value, key) => {
+        /* updates the total pirce and quantity using variables delcared earlier */
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
 
         if ( value != null) {
+            /* create element for each cart item */
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
                 <div><img src="${value.image}"/></div>
@@ -113,9 +123,11 @@ function reloadCard(){
             listCard.appendChild(newDiv);
         }
     })
+    /* Update total and quantity display */
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
 }
+/* function to change the quantity of the  items in the cart */
 function changeQuantity(key, quantity) {
     if (quantity === 0) {
         delete listCards[key];
@@ -123,7 +135,7 @@ function changeQuantity(key, quantity) {
         listCards[key].quantity = quantity;
         listCards[key].price = quantity * products[key].price;
     }
-    reloadCard();
+    reloadCard(); /* call the function */
 }
 
 
