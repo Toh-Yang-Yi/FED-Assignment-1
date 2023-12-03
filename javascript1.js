@@ -34,7 +34,7 @@ let products = [
         id: 1,
         name: 'T-shirt',
         image: "images/Jung kook t-shirt merch pic.png",
-        price: 29.90
+        price: 20.90
     },
     {
         id: 2,
@@ -58,13 +58,13 @@ let products = [
         id: 5,
         name: 'Jung Kook bag',
         image: "images/jung kook bag.png",
-        price: 29.90
+        price: 40.90
     },
     {
         id: 6,
         name: 'Seven T-shirt',
         image: "images/jung-kook-merch-page-seven-t-shirt.png",
-        price: 29.90
+        price: 20.90
     },
 
 ]
