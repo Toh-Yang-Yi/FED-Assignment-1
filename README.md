@@ -4,13 +4,18 @@ Project's name :
 Jung Kook's website
 
 Overview :
-This is a project on creating a website for a song artist - Jung Kook. This website aims to promote Jung Kook's music and also allow the fans to connect and learn more about Jung Kook. This website allows fans to book tickets to his concerts and to also listen to his released songs. Fans can also support Jung Kook buy purchasing his merch via the website.
+
+This is a project on creating a website for a song artist - Jung Kook. This website aims to promote Jung Kook's music and also allow the fans to connect and learn more about Jung Kook. This website allows fans to view Concert details and to also listen to his released songs. Fans can also support Jung Kook buy purchasing his merch via the website.
 
 Design Process :
+
 - Since this website design is specifically for Jung Kook and his fans, I thought that using the color black accompanied with white would be appropriate because Jung Kooks favourite color is black.
+
 - As a user myself, I would want the website to be convenient when locating the different sections the website has. So, I decided to use a top menu so that the menu is easily accessible and convenient.
-- As a suer myself, I also want to be able to show support to Jung Kook by purchasing his concert tickets and merch which is why at the homepage, I decided to showcase his merch and also included his concert tickets at the top menu
-LINKS :
+
+- As a user myself, I also want to be able to check when Jung kook is having a concert and also where the concert is being held at which is why at the Concert Page, I decided to showcase his concert details when a user searches for the location
+
+- As a user myself, I also want to be able to buy Jung kook merch and show him support. So, I added a add to cart function and display some jung kook merchandises on the merch page
 
 Features :
 
@@ -75,12 +80,28 @@ Merch Image : https://i.pinimg.com/564x/00/de/d7/00ded719246f2a9ac297d767c3d4888
 Video : https://youtu.be/Wgj9t0k94yQ?si=9oJdz-5A7XtLaKc_
 
 Merch Page : 
-bag : https://i.pinimg.com/564x/60/96/87/60968717236b5dee543ca222eb518128.jpg
+bag : https://www.pinterest.com/pin/908953137565008297/
 
-Hoodie : https://i.pinimg.com/564x/25/b3/82/25b3827acfd4277dbd94696941ebd36c.jpg
+Hoodie : https://www.pinterest.com/pin/607211962285917768/
 
-Golden T-shirt : https://i.pinimg.com/564x/38/b5/f0/38b5f0f9d0bb31f463750dc00322ec1b.jpg
+Golden T-shirt : https://www.pinterest.com/pin/828029081512779851/
 
-T-shirt : https://m.media-amazon.com/images/I/51rZNL5y7UL._AC_SX679_.jpg
+T-shirt : https://www.amazon.com/Dolpind-Yourself-Jersey-Jungkook-Merchandise/dp/B07CQZKH7F/ref=sr_1_4?keywords=BTS+Jungkook+Merchandise&qid=1701596577&sr=8-4
 
-Jacket : https://m.media-amazon.com/images/I/61K6MUWSrqL._AC_SX679_.jpg
+Jacket : https://www.amazon.com/Yuxrytue-Yourself-Lightweight-Pullover-Sweatshirt/dp/B09ST7N3MD/ref=sr_1_1_sspa?keywords=BTS%2BJungkook%2BMerchandise&qid=1701596577&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1
+
+seven-t-shirt : https://i.pinimg.com/564x/6d/19/64/6d1964f1d3587f76f297e8d767951399.jpg
+
+Concert Page:
+video : https://youtu.be/ohRwr2Cnj7E?si=f7hYZmEGrJCR-z-O
+
+Music Page:
+album picture : https://i.pinimg.com/736x/f9/96/fd/f996fd761bf745cf7b9dad50d96bef15.jpg
+
+seven thumbnail : https://www.pinterest.com/pin/3448137208066333/
+
+standing next to you thumbnail : https://www.pinterest.com/pin/764274999291605948/
+
+still with you thumbnail : https://www.pinterest.com/pin/662381057721446908/ 
+
+3D thumbnail : https://www.pinterest.com/pin/53058101853000329/
