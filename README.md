@@ -29,6 +29,18 @@ products - the products container include the image, type of product, descriptio
 shopping cart icon - Users can click on the shopping cart icon to reveal their cart and check how much item they have and the total cost. Thye can also remove the items for the cart.
 
 Concert Page:
-Search bar - when hovering over the search bar, the search icon will slide to the write and allow users to type their text.
+Search bar - when hovering over the search bar, the search icon will slide to the write and allow users to type their text. 
+
+Future Plans:
+I could implement a javascript for the search bar in concert page to filter out the events that are selected by the user based on the closest location to what they searched.
+
+I could implement a javascript and a search bar to the music page to filter songs absed on solo songs, order of date released of most popular.
+
+Technologies used:
+Visual Studio Code link: https://code.visualstudio.com/ - I used this app to create my HTML, Javascript and css stylesheets
+
+W3C validator link: https://validator.w3.org/ - I used this website to check if my html pages are valid
+
+Jigsaw validator link: https://jigsaw.w3.org/css-validator/ - I used this website to validate my css stylesheet
 
 
