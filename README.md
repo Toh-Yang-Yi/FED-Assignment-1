@@ -105,3 +105,10 @@ standing next to you thumbnail : https://www.pinterest.com/pin/76427499929160594
 still with you thumbnail : https://www.pinterest.com/pin/662381057721446908/ 
 
 3D thumbnail : https://www.pinterest.com/pin/53058101853000329/
+
+links :
+      instagram :https://www.instagram.com/jungkook_bighitentertainment/?hl=en
+      tik tok :https://www.tiktok.com/@jungkook?lang=en
+      twitter : https://twitter.com/jungkook_sns?lang=en
+      youtube : https://www.youtube.com/watch?v=UNo0TG9LwwI
+      bighit website : https://ibighit.com/bts/eng/
