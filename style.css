@@ -628,6 +628,18 @@ footer {
     color: white;
 }
 
+@media only screen and (max-width: 800px){
+    .music-page-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    
+}
+
 /* Concert Page */
 .concert-h1 {
     display: flex;
@@ -663,9 +675,10 @@ footer {
     max-width: 400px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transition: width 0.8s; /* for smooth transition when the width changes */
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-bottom: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 20px;
 }   
 /* expands the width of the search bar */
 .box:hover {
@@ -691,14 +704,31 @@ footer {
     font-size: 20px;
 }
 
-@media only screen and (max-width: 800px){
-    .music-page-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-    
+.text-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1daf;
+    width: 300px; /* Equal width and height for a fixed circular shape */
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Set border-radius to half of the width/height */
+    border: solid black;
+    line-height: 1.5;
 }
+
+
+.text-background h3 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.text-background h4,
+.text-background p,
+.text-background span {
+    color: white
+}
+
