@@ -43,4 +43,44 @@ W3C validator link: https://validator.w3.org/ - I used this website to check if 
 
 Jigsaw validator link: https://jigsaw.w3.org/css-validator/ - I used this website to validate my css stylesheet
 
+Testing:
+1. Add to cart function
+      i. Go to Merch page
+     ii. add an item to cart
+    iii. Check if the number displayed is changed
+     iv. tap on the cart icon
+      V. Check if the quantity increases when tapping on the + icon
+     Vi. Check if the total price at the bottom changes accordingly
 
+2. Play function
+      i. Go to the Music Page
+     ii. Click on the first play neon button
+    iii. Check if the play button plays the music and press the button again to see if it stops the music
+
+3. Drop Down function
+      i. reduce screen size to phone view
+     ii. click on hamburger bar at top right corner
+    iii. Check if the dropdown menu appears
+     iv. click on the hamburger bar again to check of if goes back up
+
+Credits:
+Index Page:
+Text : HTML is from this website: https://jungkookglobal.com/ 
+
+Top Image : 
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.grammy.com%2Fnews%2Feverything-we-know-about-jung-kook-new-album-golden&psig=AOvVaw04AAm6K5MFJeoeLLc7fSM9&ust=1701681494212000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOCRitn38oIDFQAAAAAdAAAAABAF
+
+Merch Image : https://i.pinimg.com/564x/00/de/d7/00ded719246f2a9ac297d767c3d48882.jpg
+
+Video : https://youtu.be/Wgj9t0k94yQ?si=9oJdz-5A7XtLaKc_
+
+Merch Page : 
+bag : https://i.pinimg.com/564x/60/96/87/60968717236b5dee543ca222eb518128.jpg
+
+Hoodie : https://i.pinimg.com/564x/25/b3/82/25b3827acfd4277dbd94696941ebd36c.jpg
+
+Golden T-shirt : https://i.pinimg.com/564x/38/b5/f0/38b5f0f9d0bb31f463750dc00322ec1b.jpg
+
+T-shirt : https://m.media-amazon.com/images/I/51rZNL5y7UL._AC_SX679_.jpg
+
+Jacket : https://m.media-amazon.com/images/I/61K6MUWSrqL._AC_SX679_.jpg

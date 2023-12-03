@@ -33,37 +33,37 @@ let products = [
     {
         id: 1,
         name: 'T-shirt',
-        image: "images\\Jung kook t-shirt merch pic.png",
+        image: "images/Jung kook t-shirt merch pic.png",
         price: 29.90
     },
     {
         id: 2,
         name: 'Jacket',
-        image: "images\\jung kook jacket.png",
+        image: "images/jung kook jacket.png",
         price: 29.90
     },
     {
         id: 3,
         name: 'Hoodie',
-        image: "images\\golden album jacket.png",
+        image: "images/golden album jacket.png",
         price: 29.90
     },
     {
         id: 4,
         name: 'Golden album T-shirt',
-        image: "images\\golden album t-shirt.png",
+        image: "images/golden album t-shirt.png",
         price: 29.90
     },
     {
         id: 5,
         name: 'Jung Kook bag',
-        image: "images\\jung kook bag.png",
+        image: "images/jung kook bag.png",
         price: 29.90
     },
     {
         id: 6,
         name: 'Seven T-shirt',
-        image: "images\\jung kook 'seven' t-shirt.png",
+        image: "images/jung-kook-merch-page-seven-t-shirt.png",
         price: 29.90
     },
 
